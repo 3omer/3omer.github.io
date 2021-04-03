@@ -29,7 +29,7 @@ The REST API is built with flask. In the first version the whole project lived t
 While I could have used HTTP to connect IoT devices too -which I did at early stages- but it has many draw backs: First it's bad for scalling, imagine hundered of IoT devices hitting the API every 3-5 seconds to get real time updates. Plus HTTP and JSON parsing is heavy and inconvienet at these IoT devices anyway. Thats why I opted for the light-weight MQTT portocol. Since MQTT can persists last mesaages we don't needto bother the database with IoT traffic 'huge plus for scalability', and MQTT has client liberaries for most languages throw WebSockets.
 
 
-The Client App is an SPA build with Vue.js.
+The Client App is an SPA build with Vue.js. I learned Vue.js specially for this project .. It was SMOOTH. Vue is well documented I didn't have to look for anyother resource to learn it just the docs.
 
 Screens:
 
