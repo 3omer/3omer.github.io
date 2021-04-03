@@ -1,25 +1,42 @@
 ---
 layout: project
 type: project
-image: images/vacay-square.png
-title: Vacay
-permalink: projects/vacay
+image: images/sodiumdev.png
+title: Sodiumdev
+permalink: projects/sodiumdev
 # All dates must be YYYY-MM-DD format!
-date: 2015-12-15
+date: 2020-07-27
 labels:
-  - Javascript
-  - Meteor
+  - Express.js
+  - Passport.js
   - MongoDB
-  - GitHub
-summary: A responsive web application for travel planning that my team developed in ICS 415.
+  - Redis
+  - EJS
+  - Bootstrap
+
+
+summary: A multi-user bloggin engine I build while learining about Node and Express.js.
 ---
 
-<img class="ui medium right floated rounded image" src="../images/vacay-home-page.png">
+<img class="ui medium right floated rounded image" src="../images/sodiumdev-1.png">
 
-Vacay is a web application that I helped create as a team project in ICS 415, Spring 2015. The project helped me learn how to design and implement a responsive web site.
+Sodiumdev is a complete multi-user blogging engine I build when I started learning Node.js.
 
-Vacay is implemented using [Meteor](http://meteor.com), a JavaScript application platform. Within two weeks, we created a website that implements several types of reservations including flights, hotels, and car rentals.
+> [Live Demo](https://sodiumdev.herokuapp.com/)
 
-In this project I gained experience with full-stack web application design and associated technologies, including [MongoDB](http://mongodb.com) for database storage, the [Twitter Bootstrap](http://getbootstrap.com/) CSS Framework for the user interface, and Javascript for both client and server-side programming. 
- 
-Source: <a href="https://github.com/theVacay/vacay"><i class="large github icon"></i>theVacay/vacay</a>
+## Technologies and Tools:
+- Passport.js ti implement cookies based authentication/autherization using Redis as session store.
+- Mongoose ODM.
+- [EasyMDE](https://github.com/Ionaru/easy-markdown-editor) Markdown eidtor with instant preview.
+- Responsive UI with bootstrap.
+- Redis for caching.
+
+## Screens:
+<div class="ui big images">
+  <img class="ui centered big image" src="../images/sodiumdev-1.png">
+  <img class="ui medium image" src="../images/sodiumdev-2.png">
+  <img class="ui medium image" src="../images/sodiumdev-3.png">
+  <img class="ui medium image" src="../images/sodiumdev-4.png">
+</div
+
+Source: <a href="https://github.com/3omer/sodiumdev"><i class="large github icon"></i>Sodiumdev</a>
