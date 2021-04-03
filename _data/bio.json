@@ -6,7 +6,7 @@
     "email": "omarosmandev@gmail.com",
     "phone": "+249 9110 550 25",
     "website": "https://3omer.github.io",
-    "summary": "Fresh Graduate Electrinics Engineering (Computer), Interested in building data-driven Web Apps.",
+    "summary": "Fresh Graduate Electrinics Engineering (Computer), Interested in software development.",
     "location": {
       "address": "Khartoum, Sudan",
       "postalCode": "",
@@ -86,7 +86,7 @@
       "highlights": [
         ""
       ]
-    },
+    }
   ],
   "volunteer": [
     {
@@ -97,7 +97,7 @@
       "endDate": "",
       "summary": "",
       "highlights": [
-        "",
+        ""
       ]
     },
     {
@@ -118,8 +118,7 @@
       "date": "",
       "awarder": "",
       "summary": ""
-    },
-    
+    }
   ],
   "references": [
     {
