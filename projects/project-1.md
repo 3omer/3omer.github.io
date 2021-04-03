@@ -34,9 +34,9 @@ The Client App is an SPA build with Vue.js.
 Screens:
 
 <div class="ui images">
-  <img class="ui image" src="../images/zelite-1.png">
-  <img class="ui image" src="../images/zelite-2.png">
-  <img class="ui image" src="../images/zelite-3.png">
+  <img class="ui centered big image" src="../images/zelite-1.png">
+  <img class="ui medium image" src="../images/zelite-2.png">
+  <img class="ui medium image" src="../images/zelite-3.png">
 </div>
 
 
