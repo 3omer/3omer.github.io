@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/zelite.jpg
+image: images/zelite.png
 title: Zelite
 permalink: projects/zelite
 projecturl: www.github.com/3omer/zelite
