@@ -4,7 +4,7 @@ type: project
 image: images/zelite.jpg
 title: Zelite
 permalink: projects/zelite
-projecturl:github.com/3omer/zelite
+projecturl: www.github.com/3omer/zelite
 # All dates must be YYYY-MM-DD format!
 date: 2020-07-01
 labels:
@@ -21,6 +21,8 @@ summary: I developed this platform for IoT developer to acclerate building home 
 <img class="ui image" src="{{ site.baseurl }}/images/zelite-arch.jpg">
 
 Zelite is an IoT platform to monitor and manage home devices "Lights, Fans, TV ..etc". Basically you can control any device by connecting it to a relay that has an internet connection. It's composed of a REST API for AuthN/AuthZ and devices management. The actual messaging between end devices "IoT" and the front end is done through MQTT broker.
+
+[Live Demo](https://3omer.github.io/zelite-client/)
 
 The REST API is built with flask. In the first version the whole project lived togther, I used templating language to build the front end and cookies's based authentication. Eventually I separated the front end and used JWT for authentication.
 
