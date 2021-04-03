@@ -4,7 +4,6 @@ type: project
 image: images/zelite.png
 title: Zelite
 permalink: projects/zelite
-projecturl: www.github.com/3omer/zelite
 # All dates must be YYYY-MM-DD format!
 date: 2020-07-01
 labels:
