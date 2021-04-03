@@ -32,11 +32,11 @@ Sodiumdev is a complete multi-user blogging engine I build when I started learni
 - Redis for caching.
 
 ## Screens:
-<div class="ui big images">
+<div class="ui images">
   <img class="ui centered big image" src="../images/sodiumdev-1.png">
   <img class="ui medium image" src="../images/sodiumdev-2.png">
   <img class="ui medium image" src="../images/sodiumdev-3.png">
   <img class="ui medium image" src="../images/sodiumdev-4.png">
-</div
+</div>
 
 Source: <a href="https://github.com/3omer/sodiumdev"><i class="large github icon"></i>Sodiumdev</a>
