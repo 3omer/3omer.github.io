@@ -1,44 +1,43 @@
 ---
 layout: project
 type: project
-image: images/micromouse.jpg
-title: Micromouse
-permalink: projects/micromouse
+image: images/zelite.jpg
+title: Zelite
+permalink: projects/zelite
+projecturl:github.com/3omer/zelite
 # All dates must be YYYY-MM-DD format!
-date: 2015-07-01
+date: 2020-07-01
 labels:
-  - Robotics
-  - Arduino
-  - C++
-summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+  - Web
+  - IoT
+  - Python
+  - MQTT
+  - Mongodb
+  - JWT
+  - Vue.js
+summary: I developed this platform for IoT developer to acclerate building home autoamtion solutions.
 ---
 
-<div class="ui small rounded images">
-  <img class="ui image" src="../images/micromouse-robot.png">
-  <img class="ui image" src="../images/micromouse-robot-2.jpg">
-  <img class="ui image" src="../images/micromouse.jpg">
-  <img class="ui image" src="../images/micromouse-circuit.png">
+<img class="ui image" src="{{ site.baseurl }}/images/zelite-arch.jpg">
+
+Zelite is an IoT platform to monitor and manage home devices "Lights, Fans, TV ..etc". Basically you can control any device by connecting it to a relay that has an internet connection. It's composed of a REST API for AuthN/AuthZ and devices management. The actual messaging between end devices "IoT" and the front end is done through MQTT broker.
+
+The REST API is built with flask. In the first version the whole project lived togther, I used templating language to build the front end and cookies's based authentication. Eventually I separated the front end and used JWT for authentication.
+
+
+While I could have used HTTP to connect IoT devices too -which I did at early stages- but it has many draw backs: First it's bad for scalling, imagine hundered of IoT devices hitting the API every 3-5 seconds to get real time updates. Plus HTTP and JSON parsing is heavy and inconvienet at these IoT devices anyway. Thats why I opted for the light-weight MQTT portocol. Since MQTT can persists last mesaages we don't needto bother the database with IoT traffic 'huge plus for scalability', and MQTT has client liberaries for most languages throw WebSockets.
+
+
+The Client App is an SPA build with Vue.js.
+
+Screens:
+
+<div class="ui images">
+  <img class="ui image" src="../images/zelite-1.png">
+  <img class="ui image" src="../images/zelite-2.png">
+  <img class="ui image" src="../images/zelite-3.png">
 </div>
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
-
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
-
-Here is some code that illustrates how we read values from the line sensors:
-
-```js
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
-```
-
-You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~mmouse/about.html).
 
 
 
