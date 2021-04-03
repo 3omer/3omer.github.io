@@ -24,6 +24,8 @@ Sodiumdev is a complete multi-user blogging engine I build when I started learni
 
 > [Live Demo](https://sodiumdev.herokuapp.com/)
 
+> Source: <a href="https://github.com/3omer/sodiumdev"><i class="large github icon"></i>Sodiumdev</a>
+
 ## Technologies and Tools:
 - Passport.js ti implement cookies based authentication/autherization using Redis as session store.
 - Mongoose ODM.
@@ -38,5 +40,3 @@ Sodiumdev is a complete multi-user blogging engine I build when I started learni
   <img class="ui medium image" src="../images/sodiumdev-3.png">
   <img class="ui medium image" src="../images/sodiumdev-4.png">
 </div>
-
-## Source: <a href="https://github.com/3omer/sodiumdev"><i class="large github icon"></i>Sodiumdev</a>
