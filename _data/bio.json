@@ -9,9 +9,9 @@
     "summary": "Fresh Graduate Electrinics Engineering (Computer), Interested in building data-driven Web Apps.",
     "location": {
       "address": "Khartoum, Sudan",
-      "postalCode": "96822",
+      "postalCode": "",
       "city": "Bahri",
-      "countryCode": "SDA",
+      "countryCode": "",
       "region": "Khartoum"
     },
     "profiles": [
@@ -24,11 +24,6 @@
         "network": "linkedin",
         "username": "Omer M. Osman",
         "url": "http://linkedin.com/in/3omer"
-      },
-      {
-        "network": "twitter",
-        "username": "Omar M. Osman",
-        "url": "http://twitter.com/3omermhmd"
       },
     ]
   },
@@ -50,7 +45,7 @@
         "Python",
         "Javascript",
         "Flask",
-        "Express.js"
+        "Express.js",
         "Vue.js"
       ]
     },
