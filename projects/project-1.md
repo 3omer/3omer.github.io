@@ -40,5 +40,5 @@ Screens:
 </div>
 
 
-
+For someone thats not really into the front-end stuff .. This is really neat UI right ? And the thing is I almost didn't write any CSS it's all pure bootstrap .. but definitely is was a nightmare .. specially when you don't have the UI/UX drawn for you.
 
