@@ -5,7 +5,7 @@ image: images/restaurantszone.png
 title: Restaurants Zone
 permalink: projects/restaurants-zone
 # All dates must be YYYY-MM-DD format!
-date: 2019-12-12
+date: 2019-08-22
 labels:
   - Python
   - Flask

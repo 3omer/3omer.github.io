@@ -6,13 +6,13 @@
     "email": "omarosmandev@gmail.com",
     "phone": "+249 9110 550 25",
     "website": "https://3omer.github.io",
-    "summary": "Fresh Graduate Electrinics Engineering (Computer), Interested in software development.",
+    "summary": "Fresh Graduate Electronics Engineering (Computer), Interested in software development.",
     "location": {
       "address": "Khartoum, Sudan",
       "postalCode": "",
       "city": "Bahri",
       "countryCode": "",
-      "region": "Khartoum"
+      "region": ""
     },
     "profiles": [
       {
@@ -70,7 +70,7 @@
       "studyType": "B.E.",
       "startDate": "2014-10-01",
       "endDate": "2019",
-      "gpa": "3.12",
+      "gpa": "3.00",
       "courses": [
       ]
     }

@@ -1,11 +1,11 @@
 ---
 layout: project
 type: project
-image: images/sodiumdev.png
+image: images/authserver.png
 title: Authentication Service
 permalink: projects/auth-service
 # All dates must be YYYY-MM-DD format!
-date: 2020-07-27
+date: 2020-11-26
 labels:
   - REST
   - Express.js
@@ -16,6 +16,9 @@ labels:
 
 summary: Users authentication service built with Express.js
 ---
+
+<img src="../images/authserver.png">
+
 This service is implemented as a **REST-API** for users authentication. It depends on **JWT** for managing the authentication.
 
 Features:
