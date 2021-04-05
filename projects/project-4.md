@@ -17,7 +17,7 @@ labels:
 summary: Users authentication service built with Express.js
 ---
 
-<img src="../images/authserver.png" class='ui medium image'>
+<img src="../images/authserver.png" class='ui image'>
 
 This service is implemented as a **REST-API** for users authentication. It depends on **JWT** for managing the authentication.
 
