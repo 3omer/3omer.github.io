@@ -16,14 +16,14 @@ labels:
 
 summary: Users authentication service built with Express.js
 ---
-This service is implemented as a *REST-API* for users authentication. It depends on *JWT* for managing the authentication.
+This service is implemented as a **REST-API** for users authentication. It depends on **JWT** for managing the authentication.
 
 Features:
 - Email verfication:
-    I used *Nodemailer* and *JWT* to implement this feature. Upon signing up users get an email with a verfication link. The verification link contains a token as a parameter. The endpoint verifiy the token and activate the account.
+    I used **Nodemailer** and **JWT** to implement this feature. Upon signing up users get an email with a verfication link. The verification link contains a token as a parameter. The endpoint verifiy the token and activate the account.
 
-I learnt about testing too while implementing this service. I've used *Jest* for the testing part.
-I've written the API specfication using *Postman*.
+I learnt about testing too while implementing this service. I've used **Jest** for the testing part.
+I've written the API specfication using **Postman**.
 
 Features that will be introduced soon:
 - Roles
