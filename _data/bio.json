@@ -24,7 +24,7 @@
         "network": "linkedin",
         "username": "Omer M. Osman",
         "url": "http://linkedin.com/in/3omer"
-      },
+      }
     ]
   },
   "interests": [
@@ -59,7 +59,7 @@
         "Redis",
         "RabbitMQ",
         "Ubuntu",
-        "Git/GitHub",
+        "Git/GitHub"
       ]
     }
   ],
