@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: The Ultimate Complete Tutorial for every tool .. search 🔎
+title: The Ultimate Complete Super Mastery Tutorial .. search 🔎🦄
 # All dates must be YYYY-MM-DD format!
 date: 2021-04-09
 labels:
@@ -9,20 +9,12 @@ labels:
   - Tutorials Hell
   - Vue.js
 ---
-<head>	
-<meta property="og:url"                content="https://3omer.github.io/essays/the-ultimate-tutorial.html" />
-<meta property="og:type"               content="article" />
-<meta property="og:title"              content="The Ultimate Complete Tutorial for every tool .. search 🔎" />
-<meta property="og:description"        content="I think I've learned something of more value while building APP with Vue.js" />
-<meta property="og:image"              content="https://images.unsplash.com/photo-1562037283-072818fb6d8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=james-lee-qSf_4bNsoWc-unsplash.jpg&w=640" />
-</head>
-
 
 <img class="ui centered image" src="https://images.unsplash.com/photo-1562037283-072818fb6d8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=james-lee-qSf_4bNsoWc-unsplash.jpg&w=640">
 
 
 ## Context: Vue.js is AWEASOME
-My experience with Vue.js was SUPER AMAZING. But Vue.js was not the only thing I've learned, in fact I think I've learned something of more value while building this [APP](github.com/zelite-client) with Vue. For context, this app is the client-side part of a complete [project](https://3omer.github.io/projects/zelite) I've been working on for a while and decided to give it a cool Single Page Application portal.
+My experience in learning Vue.js was amazingly smooth. But Vue.js was not the only thing I've learned, in fact I think I've learned something of more value while building this [APP](github.com/zelite-client) with Vue. For context, this app is the client-side part of a complete [project](https://3omer.github.io/projects/zelite) I've been working on for a while and decided to give it a cool Single Page Application portal.
 
 ## I've found the best resource
 See I always had this mindset that to learn new technology you've to find the ULTIMATE SUPER BEST tutorial .. book .. etc
