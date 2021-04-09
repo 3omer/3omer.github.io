@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: The Ultimate Complete Tutorial for every tool .. search 🔎;
+title: The Ultimate Complete Tutorial for every tool .. search 🔎
 # All dates must be YYYY-MM-DD format!
 date: 2021-04-09
 labels:
