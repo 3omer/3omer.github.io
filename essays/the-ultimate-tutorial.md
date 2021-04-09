@@ -9,11 +9,13 @@ labels:
   - Tutorials Hell
   - Vue.js
 ---
+<head>	
 <meta property="og:url"                content="https://3omer.github.io/essays/the-ultimate-tutorial.html" />
 <meta property="og:type"               content="article" />
 <meta property="og:title"              content="The Ultimate Complete Tutorial for every tool .. search 🔎" />
 <meta property="og:description"        content="I think I've learned something of more value while building APP with Vue.js" />
 <meta property="og:image"              content="https://images.unsplash.com/photo-1562037283-072818fb6d8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=james-lee-qSf_4bNsoWc-unsplash.jpg&w=640" />
+</head>
 
 
 <img class="ui centered image" src="https://images.unsplash.com/photo-1562037283-072818fb6d8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=james-lee-qSf_4bNsoWc-unsplash.jpg&w=640">
