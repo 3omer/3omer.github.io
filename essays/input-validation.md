@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: 'Backend Concepts: Input Validation .. Why & How'
+title: 'Backend Concepts: Input Validation'
 # All dates must be YYYY-MM-DD format!
 date: 2021-05-03
 labels:
