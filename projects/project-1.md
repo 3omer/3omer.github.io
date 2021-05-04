@@ -23,7 +23,7 @@ Zelite is an IoT platform to monitor and manage home devices "Lights, Fans, TV .
 
 > [Live Demo](https://3omer.github.io/zelite-client/)
 
-<video width="320" height="240" controls>
+<video class="" width="600px" height="240" controls>
   <source type="video/webm" src="{{ site.baseurl }}/images/zelite.webm">
 </video>
 
