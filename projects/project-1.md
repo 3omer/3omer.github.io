@@ -23,8 +23,9 @@ Zelite is an IoT platform to monitor and manage home devices "Lights, Fans, TV .
 
 > [Live Demo](https://3omer.github.io/zelite-client/)
 
-<div class="ui embed" data-source="{{ site.baseurl }}/images/zelite.webm" data-id="review" >
-</div>
+<video width="320" height="240" controls>
+  <source type="video/webm" src="{{ site.baseurl }}/images/zelite.webm">
+</video>
 
 The **REST API** is built with flask. In the first version the whole project lived togther, I used templating language to build the front end and **cookies**'s based authentication. Eventually I separated the front end and used **JWT** for authentication.
 
