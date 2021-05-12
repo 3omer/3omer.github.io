@@ -33,7 +33,7 @@ I fixed the ramp-up period on 60 seconds and ran the test with 750, 800 and 850 
 
 > Gunicorn server is started with 16 gevent workers
 
-    <img class="ui image" src="{{ site.baseurl }}/images/jmeter-results/750R-20W-MERGE.png"/>
+<img class="ui image" src="{{ site.baseurl }}/images/jmeter-results/750R-20W-MERGE.png"/>
 
 **average respone time (BLOCKING) = 443ms**
 
