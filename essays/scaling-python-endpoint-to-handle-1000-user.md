@@ -12,7 +12,8 @@ labels:
 ---
 
 <figure class="ui image centered">
-	<img src="../images/422.png">
+	<img src="../images/stuck.png">
+    <figcaption>Photo by <a href="https://unsplash.com/@octoberroses?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aubrey Odom</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 
 I was adding email-confirmation feature to aside project I'm working on. The REST-API is built by Flask, and you know Python is really not good at handling IO operations (not talking about the new ASYNC frameworks) so I thought let's test how many user the registration API can handle in on minute if we sent the email synchronously in the main thread and if I sent them asynchronously in background thread.
