@@ -6,7 +6,7 @@ title: 'Backend Concepts: Input Validation'
 date: 2021-05-03
 labels:
   - API
-  -
+  - Best Practices
   - Node.js
 ---
 
