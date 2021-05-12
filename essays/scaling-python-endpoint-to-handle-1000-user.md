@@ -36,7 +36,7 @@ I fixed the ramp-up period on 60 seconds and ran the test with 750, 800 and 850 
 
 <img class="ui image" src="{{ site.baseurl }}/images/jmeter-results/750R-20W-MERGE.png"/>
 
-**average respone time (BLOCKING) = 443ms**
+**Average respone time (BLOCKING) = 443ms**
 
 **Average response time (ASYNC) = 307ms**
 
