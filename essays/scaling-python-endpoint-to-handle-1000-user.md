@@ -22,7 +22,7 @@ I was adding email-confirmation feature to aside project I'm working on. The RES
 Testing by Jmeter:
 I generally used `appache-benchmark` to load test endpoints but in this case I have to generate dynamic payloads with different email and username every request and Apache is not really suitable for that, I googled around and I found this tool called `Jmeter`.
 
-<img class="ui image" src="{{ site.baseurl }}/images/jmeter-results/jmeter.png""/>
+<img class="ui image" src="{{ site.baseurl }}/images/jmeter-results/jmeter.png"/>
 
 `number of threads` and `ramp-up period` determine how many concurrent requests Jmeter is going to fore. For example 1000 users in 10 seconds means Jmeter will initiate 100 requests every seconds.
 I fixed the ramp-up period on 60 seconds and ran the test with 750, 800 and 850 requests. In each test I generated a response-time graph because I think it's more interesting than just comparing the average response-time.
