@@ -30,24 +30,17 @@
   "interests": [
     {
       "name": "programming",
-      "keywords": [
-      ]
+      "keywords": []
     },
     {
-    "name": "data-driven apps"
+      "name": "data-driven apps"
     }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
       "level": "",
-      "keywords": [
-        "Python",
-        "Javascript",
-        "Flask",
-        "Express.js",
-        "Vue.js"
-      ]
+      "keywords": ["Python", "Javascript", "Flask", "Express.js", "Vue.js"]
     },
     {
       "name": "Toolsets/OS",
@@ -70,24 +63,11 @@
       "studyType": "B.E.",
       "startDate": "2014-10-01",
       "endDate": "2019",
-      "gpa": "3.00",
-      "courses": [
-      ]
+      "gpa": "3.04",
+      "courses": []
     }
   ],
-  "work": [
-    {
-      "company": "",
-      "position": "",
-      "website": "",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        ""
-      ]
-    }
-  ],
+
   "volunteer": [
     {
       "organization": "",
@@ -96,9 +76,7 @@
       "startDate": "",
       "endDate": "",
       "summary": "",
-      "highlights": [
-        ""
-      ]
+      "highlights": [""]
     },
     {
       "organization": "",
@@ -107,17 +85,7 @@
       "startDate": "",
       "endDate": "",
       "summary": "",
-      "highlights": [
-       ""
-      ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "",
-      "date": "",
-      "awarder": "",
-      "summary": ""
+      "highlights": [""]
     }
   ],
   "references": [
