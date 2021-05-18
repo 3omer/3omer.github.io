@@ -16,7 +16,7 @@ labels:
     <figcaption>Photo by <a href="https://unsplash.com/@octoberroses?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aubrey Odom</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 
-I was adding email-confirmation feature to aside project I'm working on. The REST-API is built by Flask, and you know Python is really not good at handling IO operations -not talking about the new ASYNC based frameworks- so I thought it would be really interesting to investigate the performance behavior when we send the confirmation email synchronously in the main thread VS sending it asynchronously in a background thread. My intuition is saying that when I delegate sending emails to a background thread the latency should be very close to the latency before introducing this feature. But hey! this all just a theoretical speaking .. let's see what the machine has to say!.
+I was adding email-confirmation feature to aside project I'm working on. The REST-API is built by Flask, and you know Python is really not good at handling IO operations -not talking about the new ASYNC based frameworks- so I thought it would be really interesting to investigate the performance behavior when we send the confirmation email synchronously in the main thread VS sending it asynchronously in a background thread. My intuition is saying that when I delegate sending emails to a background thread the latency should be very close to the latency before introducing this feature. But hey! this all is just a theoretical speaking .. let's see what the machine has got to say!.
 
 ## Jmeter configuration
 
@@ -77,7 +77,7 @@ OK let's explore how the response time will react to the introduced delay.
 
 ### At 750 request
 
-I didn't finish the test. After 400 request sent I noticed the number of queued requests had gotten over 100 ! and the response time is now 1863ms comparing to 443ms when there was no delay! .. Why? because there are no free workers to accept more requests, All the 20 workers are forced to wait 500ms for the mail server to respond .. this is the blocking effect we didn't notice when the mail server was local.
+I didn't finish the test. After 400 request sent I noticed the number of queued requests had gotten over 100 ! and the response time is now 1863ms comparing to 443ms when there was no delay! .. Why? because there are no free workers to accept more requests, All the 20 workers are forced to wait 500ms for the mail server to respond .. this is the blocking effect we didn't notice when the mail server was local. Contrary -and as expected- the threaded version's response-time is not effected by the delay .. phew! 
 <img class="ui image" src="{{ site.baseurl }}/images/jmeter-results/DELAY-750R.png"/>
 
 So threads really worth the effort right ?! Well. Yeah. But. You know. Not so many people are excited about threads and the complexity introduced by threads. So? .. So all I am saying is that when your application is IO bounded maybe you should think about other options.
