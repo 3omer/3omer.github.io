@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: 'Investigating a Python endpoint performance: handling IO operation in background threads'
+title: 'Investigating Python API performance: handling IO operation in background threads'
 # All dates must be YYYY-MM-DD format!
 date: 2021-05-13
 labels:
