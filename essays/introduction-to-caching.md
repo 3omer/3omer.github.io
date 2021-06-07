@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: 'Backend Concepts: Input Validation'
+title: 'Introduction to Redis - Part-1'
 # All dates must be YYYY-MM-DD format!
 date: 2021-06-08
 labels:
