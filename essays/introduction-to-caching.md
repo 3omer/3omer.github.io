@@ -1,3 +1,16 @@
+---
+layout: essay
+type: essay
+title: 'Backend Concepts: Input Validation'
+# All dates must be YYYY-MM-DD format!
+date: 2021-06-08
+labels:
+  - Redis
+  - caching
+  - Node.js
+  - performance
+---
+
 # Introduction to Redis:
 
 This a 3 parts articel introducing `Redis` and how it can be used to solve different problems. The first part I'll use Redis to cache the landing page database query.
