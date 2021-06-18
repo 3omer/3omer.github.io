@@ -17,6 +17,11 @@ code.language-plaintext {
   border: 1px solid #e1e1e8;
 }
 
+// links keeps their colors
+a code.language-plaintext {
+  background-color: inherit;
+}
+
 // Customize the menubar color
 .ui.menu {
   // background: $background-start;
