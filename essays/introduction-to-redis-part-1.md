@@ -56,7 +56,7 @@ Redis client doesn't support `promises` yet, so I wrapped it in an `async` funct
 Line `13` defines the `key` that's used to store recent-articles on Redis. Line 17, the command [`zrevrange`](https://redis.io/commands/zrevrange) is used to return the articles list ordered from highest to lowest, since the `score` is a `timestamp` this means we get the most recent articles. For now it returns all of them, but it shouldn't, we should use pagination.
 As I said we should pay attention to the cost, `zrevrange` call has a time-complexity of `O(log((N) + M))`, with `M` being the retrieved items' length, it's fast!.
 Notice on line `21`, the data that's retrieved is `string` we need to parse and convert it back as as an `Articel model` instance.
-Line `17`, we call [`zadd`](https://redis.io/commands/zadd) to insert an article into the list, notice we need to `stringfy` it first. This call has a `O(log(N)` cost, so both reading and writing can scale very well.
+Line `17`, we call [`zadd`](https://redis.io/commands/zadd) to insert an article into the list, notice we need to `stringfy` it first. This call has a `O(log(N))` cost, so both reading and writing can scale very well.
 
 The [caching strategy](https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/) i'm using is called `Cache-Aside` as implemented in `getRecentArticles()`. It's simple, `getRecentArticles()` **first** checks Redis for articles, if it is empty (or unreachable at all), **then**: fallback to the database (fetch fresh data), **then** cache the data for subsequent reads.
 
@@ -129,5 +129,5 @@ Here is the complete project source code:
 Finally a general guide lines and the “take away” from this experiment :
 
 - Identify the queries you want to cache.
-- Choose convenient data structure optimized for the operation you need (time complexity eg. `O(1)` access time, sorting `O(logN)`, .. etc)
+- Choose convenient data structure optimized for the operation you need (time complexity eg. `O(1)` access time, sorting `O(log(N))`, .. etc)
 - Keep data consistent. (`TTL`, Write through, .. . )
