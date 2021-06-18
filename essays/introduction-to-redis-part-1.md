@@ -2,6 +2,7 @@
 layout: essay
 type: essay
 title: 'Introduction to Redis - Part-1'
+cover: '{{ site.baseurl}}/images/cache-aside.png'
 # All dates must be YYYY-MM-DD format!
 date: 2021-06-08
 labels:
