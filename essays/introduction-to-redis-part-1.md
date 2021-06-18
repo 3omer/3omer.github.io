@@ -11,6 +11,10 @@ labels:
   - performance
 ---
 
+<figure class="ui image centered">
+	<img src="{{ site.baseurl}}/images/cache-aside.png">
+</figure>
+
 # Introduction to Redis:
 
 This a 3 parts article introducing `Redis` and how it can be used to solve different problems. The first part I'll use Redis to cache the landing page database query.
