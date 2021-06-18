@@ -25,7 +25,7 @@ All the examples are implemented in a multi-user blog I made while learning Node
 
 ## Part 1: Redis for caching
 
-Redis is defined as in-memory data-structure and it's well known for being amazingly fast. Before start writing code first thing you should know exactly what [data-structure](https://redislabs.com/redis-enterprise/data-structures/) is most convenient to solve your problem. To make this decision we need to know what are the operations your application will frequently needs to run on the data eg. reading, inserting, searching. [Redis commands docs] (https://redis.io/commands) explains the complexity (cost) of each command that you’ll use to manipulate the data. Having these info in mind we can utilize Redis to boost the back-end performance.
+Redis is defined as in-memory data-structure and it's well known for being amazingly fast. Before start writing code first thing you should know exactly what [data-structure](https://redislabs.com/redis-enterprise/data-structures/) is most convenient to solve your problem. To make this decision we need to know what are the operations your application will frequently needs to run on the data eg. reading, inserting, searching. [Redis commands docs](https://redis.io/commands) explains the complexity (cost) of each command that you’ll use to manipulate the data. Having these info in mind we can utilize Redis to boost the back-end performance.
 
 ### Query caching:
 
@@ -33,7 +33,12 @@ Check the controller code below that renders the most recent articles:
 
 <script src="https://gist.github.com/3omer/da4271554d3a050817219d3aa8a64070/095530fc4177acf0194e3c3a20a9a919b091a5b8.js?file=main.js"></script>
 
-Instead of querying mongodb on every request, we will cache the result on first read.
+Instead of querying mongodb on every request, we will cache the result on first read. There is a little bug here, the query actually is not sorting the articles, it should be
+
+```javascript
+Article.find({}).populate('author').sort({ createdAt: -1 })
+```
+
 For this it makes sense to use a data-structure that’s prioritized for sorting, like the [`sorted set`](https://redis.io/topics/data-types#sorted-sets), every member in the list has an associated `score` value for sorting which I set to the article's `createdAt` attribute.
 
 I've seen some [articles](https://medium.com/@haimrait/how-to-add-a-redis-cache-layer-to-mongoose-in-node-js-a9729181ad69) that extends the mongoose query object and set the code responsible to deal with caching in a pre-query hook, but It's kind of complicated if you are not familiar with prototyping and inheritance, even though it's less repetitive. Another downside with this patteren is that it's very coupled with the database engine you are using.
@@ -105,17 +110,24 @@ Finally I tested the impact of the changes I introduced -caching + session store
         <td data-label="After Redis">324.15</td>
       </tr>
       <tr>
-        <td data-label="# conccurent req.">200</td>
+        <td data-label="No. conccurent req.">200</td>
         <td data-label="Before Redis">129.90</td>
         <td data-label="After Redis">335.71</td>
       </tr>
     </tbody>
   </table>
 
+## Source code:
+
+Here is the complete project source code:
+
+- [before adding redis](https://github.com/3omer/Sodiumdev/tree/57a62ef341831f0a61051e6af4071739c34696da),
+- [after adding redis](https://github.com/3omer/Sodiumdev/blob/c26c72dd66c1a8184cf384c6744482fcfa03d26a)
+
 ## Guide lines:
 
 Finally a general guide lines and the “take away” from this experiment :
 
 - Identify the queries you want to cache.
-- Choose convenient data structure optimized for the operation you need (time complexity eg. O(1) access time, sorting O(logn), .. etc)
-- Keep data consistent. (TTL, Write through, .. . )
+- Choose convenient data structure optimized for the operation you need (time complexity eg. `O(1)` access time, sorting `O(logN)`, .. etc)
+- Keep data consistent. (`TTL`, Write through, .. . )
