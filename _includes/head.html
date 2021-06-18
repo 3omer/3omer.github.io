@@ -9,11 +9,8 @@
     property="og:description"
     content="{{ page.content | markdownify | strip_html | truncatewords: 100 }}"
   />
-  <meta property="og:url" content="{{ site.baseurl}}{{ include.page.url }}}" />
-  <meta
-    property="og:image"
-    content="{{ site.baseurl }}{{ include.page.cover }}"
-  />
+  <meta property="og:url" content="{{ page.url | relative_url }}" />
+  <meta property="og:image" content="{{ page.cover | relative_url }}" />
 
   <title>
     {% if page.title %} {{ page.title }} | {% endif %} {{ site.title }}
