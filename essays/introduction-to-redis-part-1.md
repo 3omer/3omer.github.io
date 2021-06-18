@@ -19,8 +19,8 @@ labels:
 # Introduction to Redis:
 
 This a 3 parts article introducing `Redis` and how it can be used to solve different problems. The first part I'll use Redis to cache the landing page database query.
-[The second part]() is another use case where I'll use Redis to calculate most-viewed articles and retrieve them efficiently without bothering the database too much.
-Part-3 I'll refactor the code introduced in the previous parts.
+[The second part](#) is another use case where I'll use Redis to calculate most-viewed articles and retrieve them efficiently without bothering the database too much.
+[Part-3](#) I'll refactor the code introduced in the previous parts.
 All the examples are implemented in a multi-user blog I made while learning Node.js (Express.js). **Remember** this is only for learning purposes and _not by anyway_ the most efficient way to serve blogs.
 
 ## Part 1: Redis for caching
