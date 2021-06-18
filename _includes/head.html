@@ -7,10 +7,10 @@
   <meta property="og:title" content=" {{ page.title }}" />
   <meta
     property="og:description"
-    content="{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}"
+    content="{{ page.content | markdownify | strip_html | truncatewords: 100 }}"
   />
-  <meta property="og:url" content="{{ site.baseurl}}{{ include.page.url }}" />
-  <meta property="og:image" content="{{page.cover}}" />
+  <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}" />
+  <meta property="og:image" content="{{ site.baseurl }}{{ page.cover }}" />
 
   <title>
     {% if page.title %} {{ page.title }} | {% endif %} {{ site.title }}
