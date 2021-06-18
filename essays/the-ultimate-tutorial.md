@@ -55,3 +55,8 @@ To summarize this
 
 - Build more complicated app.
   I was going to say improve what you've already built .. but I know most often you'll be bored about going back. It's OK .. this time build complex stuff guided by the mistakes you made during building the small apps. The more interesting app you build the more likely you're welling to improve it.
+
+## My 2 cents about frontend
+
+I think it's important if you are a backend developer to wear this hat from now and then, consuming your API and manipulating data you return for UI guys will give you a better idea about how to design good APIs.
+Ok .. that's would be all I just have this ever unanswered question that I guess most backend guys wonder about .. . How do you guys design and pick nicely matching colors and actually do CSS without going insane? .. seriously how? freaking wizards. maybe the right-left minded is not a [myth](https://simple.wikipedia.org/wiki/Lateralization_of_brain_function) afterall ?
