@@ -44,5 +44,3 @@ The Client App is an **SPA** build with **Vue.js**. I learned **Vue.js** special
   <img class="ui medium image" src="../images/zelite-2.png">
   <img class="ui medium image" src="../images/zelite-3.png">
 </div>
-
-For someone thats not really into the front-end stuff .. This is really neat UI right ? And the thing is I almost didn't write any CSS it's all pure bootstrap .. but definitely is was a nightmare .. specially when you don't have the UI drawn for you.
