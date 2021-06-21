@@ -34,7 +34,7 @@ const incArtilceViews = async (artilceId) => {
 }
 ```
 
-This is the first bulding block, we will use this function in the controller code that retrieve article, the `zincrby` command increament the score by 1, simple.
+This is the first bulding block, we will use this function in the controller code that retrieve article, the `zincrby` [command](https://redis.io/commands/zincrby) increaments the score by 1, simple.
 
 ```javascript
 const getArticlePage = async (req, res, next) => {
@@ -94,7 +94,7 @@ const getMostViewedArticles = async (length) => {
 When we query mongodb for example the IDs [id1, id2, id3], it's not guranted that mongo will return the items in the same order as in the query, the items will be in a random order, and so I re-ordered them to match the correct order we already got from Redis.
 Now we can use this function in the conroller and call it a day, but there is one last trick to pull on this, we don't want to even query those few ID's, we would like to cache the top articles also. So a slight change to the function above is and you'll probably recognize this pattered :
 First: check if top articles already in cache, else: execute the query and finally cache the result for subsequent reads.
-I'm using [Redis List]() to cache the top articles list, The list items are ordered in the order they are pushed in.
+I'm using [Redis List](https://redis.io/topics/data-types-intro#redis-lists) to cache the top articles list, The list items are ordered in the order they are pushed in.
 We will use [rpush]() to insert new item and [lrange]() to retrieve items.
 
 ```javascript
