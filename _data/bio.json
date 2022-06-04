@@ -10,7 +10,7 @@
     "location": {
       "address": "Khartoum, Sudan",
       "postalCode": "",
-      "city": "Bahri",
+      "city": "",
       "countryCode": "",
       "region": ""
     },
@@ -33,34 +33,34 @@
       "keywords": []
     },
     {
-      "name": "data-driven apps"
+      "name": "Web apps"
     }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
       "level": "",
-      "keywords": ["Python", "Javascript", "Flask", "Express.js", "Vue.js"]
+      "keywords": [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "Flask",
+        "Express.js",
+        "Vue.js",
+        "Angular"
+      ]
     },
     {
       "name": "Toolsets/OS",
       "level": "",
-      "keywords": [
-        "Mongodb",
-        "Postman",
-        "Docker",
-        "Redis",
-        "RabbitMQ",
-        "Ubuntu",
-        "Git/GitHub"
-      ]
+      "keywords": ["Mongodb", "Docker", "Redis", "RabbitMQ", "Git/GitHub"]
     }
   ],
   "education": [
     {
       "institution": "Sudan University of Science and Technology, Khartoum",
       "area": "Electronics Engineering (Computer & Networks)",
-      "studyType": "B.E.",
+      "studyType": "B.Sc.(Honors)",
       "startDate": "2014-10-01",
       "endDate": "2019",
       "gpa": "3.04",
