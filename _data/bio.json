@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Omar M. Osman",
-    "label": "Software Developer | Web",
+    "label": "Software Developer",
     "picture": "https://3omer.github.io/images/profile.png",
     "email": "omarosmandev@gmail.com",
     "website": "https://3omer.github.io",
@@ -37,22 +37,35 @@
   ],
   "skills": [
     {
-      "name": "Languages and Frameworks",
+      "name": "Front-end",
       "level": "",
       "keywords": [
-        "Python",
+        "HTMl",
+        "CSS",
         "JavaScript",
         "TypeScript",
-        "Flask",
-        "Express.js",
+        "Bootstrap",
         "Vue.js",
-        "Angular"
+        "Angular",
+        "JQuery"
       ]
     },
     {
-      "name": "Toolsets/OS",
+      "name": "Back-end",
       "level": "",
-      "keywords": ["Mongodb", "Docker", "Redis", "RabbitMQ", "Git/GitHub"]
+      "keywords": [
+        "REST-API",
+        "Node.js (Express.js)",
+        "Python (Flask)",
+        "Mongodb",
+        "SQLite",
+        "Jest (Testing)"
+      ]
+    },
+    {
+      "name": "Other Tools",
+      "level": "",
+      "keywords": ["GIT", "Redis", "Familiar with Azure DevOps"]
     }
   ],
   "education": [
@@ -61,14 +74,46 @@
       "area": "Electronics Engineering (Computer & Networks)",
       "studyType": "B.Sc.(Honors)",
       "startDate": "2014-10-01",
-      "endDate": "2019",
+      "endDate": "2020",
       "gpa": "3.04",
       "courses": []
     }
   ],
+  "work": [
+    {
+      "company": "Najm Technology",
+      "position": "Software Developer",
+      "website": "www.najmtech.com",
+      "startDate": "Sep 2021",
+      "endDate": "Current",
+      "summary": "",
+      "highlights": [
+        "Worked closely with the manager to design and implement new features based on functional requirements and specifications",
+        "Created custom Angular components for internal framework",
+        "Revamped legacy UI components and refactored existing code",
+        "Successfully built a reusable Kanban Module using Angular",
+        "Worked closely with back-end team to debug and fix ambiguous errors",
+        "Provided support to the team lead in mentoring interns and guided them through their projects",
+        "Participated in knowledge-sharing sessions to introduce the team to the front-end work and Angular framework specifically"
+      ]
+    },
+    {
+      "company": "Solus",
+      "position": "Software Developer",
+      "website": "soluspay.net",
+      "startDate": "Mar 2021",
+      "endDate": "Sep 2021",
+      "summary": "",
+      "highlights": [
+        "Successfully extended a third-party Python library to be used in one of the company main web services",
+        "Worked with the team to complete and ship new features in time for a client with a shorter than normal time-frame",
+        "Successfully upgraded a web-portal (Angular) from version 8 to 12"
+      ]
+    }
+  ],
   "references": [
     {
-      "name": "Mohammed Usif CTO @Soluspay",
+      "name": "Mohammed Usif CTO @Solus",
       "reference": "adonese@soluspay.net­ "
     }
   ]
