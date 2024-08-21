@@ -5,7 +5,7 @@
     "picture": "https://3omer.github.io/images/profile.webp",
     "email": "omarosmandev@gmail.com",
     "website": "https://3omer.github.io",
-    "summary": "Fresh Graduate Electronics Engineering (Computer), Interested in software development.",
+    "summary": "Software Developer with a passion for JavaScript, always eager to learn new technologies and build practical solutions that make an impact.",
     "location": {
       "address": "Khartoum, Sudan",
       "postalCode": "",
@@ -28,44 +28,52 @@
   },
   "interests": [
     {
-      "name": "programming",
-      "keywords": []
+      "name": "Front-End",
+      "keywords": ["React.js", "Angular"]
     },
     {
-      "name": "Web apps"
+      "name": "Back-End",
+      "keywords":["Node.js", "Python"]
     }
   ],
   "skills": [
     {
-      "name": "Front-end",
+      "name": "Front-End",
       "level": "",
       "keywords": [
         "HTMl",
         "CSS",
         "JavaScript",
         "TypeScript",
+        "React.js",
+        "Jest",
+        "TailwindCSS",
         "Bootstrap",
-        "Vue.js",
+        "Webpack",
         "Angular",
+        "SASS",
         "JQuery"
       ]
     },
     {
-      "name": "Back-end",
+      "name": "Back-End",
       "level": "",
       "keywords": [
         "REST-API",
         "Node.js (Express.js)",
         "Python (Flask)",
         "Mongodb",
-        "SQLite",
-        "Jest (Testing)"
+        "SQLite"
       ]
     },
     {
       "name": "Other Tools",
       "level": "",
-      "keywords": ["GIT", "Redis", "Familiar with Azure DevOps"]
+      "keywords": [
+        "GIT",
+        "Redis",
+        "Familiar with Azure DevOps"
+      ]
     }
   ],
   "education": [
@@ -81,11 +89,27 @@
   ],
   "work": [
     {
+      "company": "Interface Co. LTD.",
+      "position": "Front-End Developer",
+      "website": "https://interface-ict.com/contact/",
+      "startDate": "Sep 2022",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "Developed and maintained various admin tools for internal use, ensuring user-friendly interfaces and efficient functionality.",
+        "Reduced development time by initiating customizable dashboard theme template, that has been the default starter for new projects. Built with Webpack, SASS and Bootstrap 5.",
+        "Enhanced projects delivery by regularly improvising on UI/UX design, ensuring visually appealing and functional interfaces in the absence of a dedicated designer.",
+        "Recognized for creativity by fulfilling a special request from HR to design and develop a company-wide tournament game, positively impacting employee engagement. The project built with the new React 18 APIs, HeadlessUI Library and Tailwind.",
+        "Provided cross-team support by assisting various teams with front-end development issues, becoming a go-to resource for resolving complex front-end challenges.",
+        "Supported backend development by assisting in maintaining a Java-based project when the backend team was fully utilized, ensuring project timelines were met."
+      ]
+    },
+    {
       "company": "Najm Technology",
       "position": "Software Developer",
       "website": "www.najmtech.com",
       "startDate": "Sep 2021",
-      "endDate": "Current",
+      "endDate": "Sep 2022",
       "summary": "",
       "highlights": [
         "Worked closely with the manager to design and implement new features based on functional requirements and specifications",
@@ -105,16 +129,11 @@
       "endDate": "Sep 2021",
       "summary": "",
       "highlights": [
-        "Successfully extended a third-party Python library to be used in one of the company main web services",
         "Worked with the team to complete and ship new features in time for a client with a shorter than normal time-frame",
         "Successfully upgraded a web-portal (Angular) from version 8 to 12"
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Mohammed Usif CTO @Solus",
-      "reference": "adonese@soluspay.net­ "
-    }
-  ]
+  "references": [],
+  "cv": "https://drive.google.com/file/d/1CIy8NXizTGdOLvEzz1ZseWwaEqJx5WvB/view?usp=sharing"
 }
