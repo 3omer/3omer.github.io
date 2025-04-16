@@ -1,15 +1,15 @@
 ---
 layout: essay
 type: essay
-title: Handling Database Locks in Spring Boot: Solving Concurrency
+title: 'Handling Database Locks in Spring Boot: Solving Concurrency (AI-GEN-BLOG 🤖)'
 # All dates must be YYYY-MM-DD format!
-date: 2021-04-17
+date: 2025-04-16
 labels:
   - AI-GEN-BLOG
   - Java
   - Spring
-  - Database
-  - Locking
+  - RDBMS
+  - Concurrency
 ---
 
 <figure class="ui image centered">
@@ -17,28 +17,23 @@ labels:
   <figcaption class="ui centered label">Gemini generated image</figcaption>
 </figure>
 
+Concurrency issues are common in modern applications where multiple users interact with the same data. One such issue is when two users try to purchase the last item of a product at the same time. In this blog post, we'll explore how to solve this using **database locks** in a **Spring Boot** application with **Spring Data JPA** and **PostgreSQL**.
 
+## ✨ Objectives
 
+- Understand why database locks are important
+- Learn how to use **pessimistic** and **optimistic** locking in Spring Boot
+- Demonstrate the problem using a real-world e-commerce example
+- Solve it using **pessimistic locking**
+- Write a test that simulates the issue and proves the fix
 
+---
 
-Concurrency issues are common in modern applications where multiple users interact with the same data. One such issue is when two users try to purchase the last item of a product at the same time. In this blog post, we'll explore how to solve this using database locks in a Spring Boot application with Spring Data JPA and PostgreSQL.
-
-✨ Objectives
-
-Understand why database locks are important
-
-Learn how to use pessimistic and optimistic locking in Spring Boot
-
-Demonstrate the problem using a real-world e-commerce example
-
-Solve it using pessimistic locking
-
-Write a test that simulates the issue and proves the fix
-
-📝 The Problem: Race Condition During Purchase
+## 📝 The Problem: Race Condition During Purchase
 
 Imagine a scenario where only one unit of a product is left in stock. Two users attempt to purchase it at the same time. If your code looks like this:
 
+```java
 @Transactional
 public void purchaseProduct(Long productId) {
     // Step 1: Load product from DB
@@ -54,46 +49,48 @@ public void purchaseProduct(Long productId) {
         throw new RuntimeException("Out of stock");
     }
 }
+```
 
-This method is annotated with @Transactional, which ensures that the operations within it are executed in a single transaction. However, this does not prevent concurrent transactions from reading the same value at the same time.
+This method is annotated with `@Transactional`, which ensures that the operations within it are executed in a single transaction. However, **this does not prevent concurrent transactions from reading the same value at the same time**.
 
-🐞 What Goes Wrong?
+### 🐞 What Goes Wrong?
 
 Let's say:
 
-The database has one unit of Product A.
-
-Thread A and Thread B both invoke purchaseProduct(1) at nearly the same moment.
+- The database has one unit of Product A.
+- Thread A and Thread B both invoke `purchaseProduct(1)` at nearly the same moment.
 
 Here’s what can happen:
 
-Thread A reads the product and sees quantity = 1.
+1. **Thread A** reads the product and sees quantity = 1.
+2. **Thread B** does the same before A commits.
+3. Both threads pass the `if (quantity > 0)` check.
+4. Both reduce quantity by 1 and save.
 
-Thread B does the same before A commits.
+Now you've sold the same item twice! The DB allows this because no lock was enforced during the `findById` call.
 
-Both threads pass the if (quantity > 0) check.
+---
 
-Both reduce quantity by 1 and save.
-
-Now you've sold the same item twice! The DB allows this because no lock was enforced during the findById call.
-
-🔒 The Solution: Pessimistic Locking
+## 🔒 The Solution: Pessimistic Locking
 
 With pessimistic locking, a row in the database is locked as soon as it is read, preventing other transactions from modifying it until the lock is released.
 
-✅ Update the Repository
+### ✅ Update the Repository
 
+```java
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("SELECT p FROM Product p WHERE p.id = :id")
     Optional<Product> findByIdForUpdate(@Param("id") Long id);
 }
+```
 
-The @Lock(LockModeType.PESSIMISTIC_WRITE) annotation ensures that the database acquires a lock on the row, preventing other transactions from reading or writing to it until the current transaction finishes.
+The `@Lock(LockModeType.PESSIMISTIC_WRITE)` annotation ensures that the database acquires a lock on the row, preventing other transactions from reading or writing to it until the current transaction finishes.
 
-✅ Update the Service Method
+### ✅ Update the Service Method
 
+```java
 @Service
 public class ProductService {
     private final ProductRepository productRepository;
@@ -116,13 +113,17 @@ public class ProductService {
         }
     }
 }
+```
 
 This prevents multiple threads from simultaneously reading and modifying the same row, eliminating the overselling issue.
 
-🔍 Test: Simulate Concurrency
+---
+
+## 🔍 Test: Simulate Concurrency
 
 We simulate two concurrent purchases for the last item in stock. Only one should succeed.
 
+```java
 @SpringBootTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 public class ProductServiceConcurrencyTest {
@@ -176,34 +177,26 @@ public class ProductServiceConcurrencyTest {
         assertEquals(0, updatedProduct.getQuantity());
     }
 }
+```
 
-🧠 Alternative: Optimistic Locking
+---
 
-Optimistic locking is another approach where a version field is used to detect concurrent modifications. It's great when conflicts are rare and performance is critical. If a conflict is detected, you can retry the operation using @Retryable from Spring Retry.
+## 🧠 Alternative: Optimistic Locking
+
+Optimistic locking is another approach where a version field is used to detect concurrent modifications. It's great when conflicts are rare and performance is critical. If a conflict is detected, you can retry the operation using `@Retryable` from Spring Retry.
 
 We won't dive into the code here, but optimistic locking is ideal when you want fast reads and are okay with occasional retries.
 
-🧠 Summary
+---
 
-Lock Type
+## 🧠 Summary
 
-Use When
+| Lock Type        | Use When                             | Notes                                          |
+| ---------------- | ------------------------------------ | ---------------------------------------------- |
+| Pessimistic Lock | Conflicts are frequent               | Uses actual DB row locks                       |
+| Optimistic Lock  | Conflicts are rare, high read volume | Uses versioning, faster, needs retry mechanism |
 
-Notes
-
-Pessimistic Lock
-
-Conflicts are frequent
-
-Uses actual DB row locks
-
-Optimistic Lock
-
-Conflicts are rare, high read volume
-
-Uses versioning, faster, needs retry mechanism
-
-Using Spring Data JPA + Pessimistic Locking, you can reliably handle race conditions. For read-heavy systems with rare conflicts, Optimistic Locking with retry support can be an efficient alternative.
+Using **Spring Data JPA + Pessimistic Locking**, you can reliably handle race conditions. For read-heavy systems with rare conflicts, **Optimistic Locking** with retry support can be an efficient alternative.
 
 Let me know if you'd like to explore deadlock handling or distributed locking next!
 
