@@ -190,7 +190,7 @@ We won't dive into the code here, but optimistic locking is ideal when you want 
 ---
 
 ## 🧠 Summary
-<table>
+<table class="ui table padded">
 <tr>
     <th>Lock Type</th>
     <th>Use When</th>
