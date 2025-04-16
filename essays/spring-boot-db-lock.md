@@ -4,6 +4,7 @@ type: essay
 title: 'Handling Database Locks in Spring Boot: Solving Concurrency (AI-GEN-BLOG 🤖)'
 # All dates must be YYYY-MM-DD format!
 date: 2025-04-16
+cover: '/images/spring-boot-db-lock-essay-cover.png'
 labels:
   - AI-GEN-BLOG
   - Java
