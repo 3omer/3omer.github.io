@@ -262,7 +262,7 @@ Using **Spring Data JPA + Pessimistic Locking**, you can reliably handle race co
 ## ⚠️ Alternative: Serializable Isolation Level
 If you're using `PostgreSQL`, setting the transaction isolation level to `SERIALIZABLE` is another way to prevent race conditions without explicitly using locking annotations. 
 
-```Java
+```java
 @Transactional(isolation = Isolation.SERIALIZABLE)
 public void purchaseProduct(Long productId) {...}
 ```
